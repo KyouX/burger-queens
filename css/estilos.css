@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+
+/* ------------------------------------
+    Declaración de variables 
+   ------------------------------------  */
+
+:root {
+  --text-primary: #f39a12;
+  --text-base: #161412;
+  --text-footer: #ffffff;
+  --bg-primary: #faf0e1aa;
+  --bg-primary-bold: #faf0e1;
+  --bg-secondary: #ffffff;
+  --bg-other: #face8c;
+  --bg-footer: #161412;
+  --shadow-card: rgba(0, 0, 0, 0.1);
+  --radius-base: 10px;
+  --radius-rounded: 50%;
+}
+
+/* ------------------------------------
+    Selectores de estilo de tipo HTML
+   ------------------------------------  */
+
+/* Estilos para los titulos */
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: Galada, Sen, sans-serif, cursive;
+  text-shadow: 2px 2px 0px white;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+/* Estilos para los subtitulos */
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-family: Galada, Sen, sans-serif, cursive;
+}
+
+/* Eliminando margenes para los titulos de articulos */
+h3 {
+  margin: 0;
+}
+
+/* Eliminando margenes para los parrafos */
+p {
+  margin: 0;
+}
+
+/* Modicando colores, margenes y tipografia para el body */
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  font-family: Sen, sans-serif;
+  color: var(--text-base);
+  line-height: 1.5; /* Incrementar el interlineado */
+  overflow-wrap: break-word;
+  max-width: 100vw;
+}
+
+/*Links*/
+a{
+  text-decoration: none;
+}
+/* ------------------------------------
+    Selectores de estilo de tipo class
+   ------------------------------------  */
+
+/* Estilos para el logo */
+.cont-logo {
+  padding: 0.3rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--text-primary);
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Estilos para el menú */
+
+.menu{
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  color: var(--text-primary);
+  justify-content: space-between;
+}
+
+.menu-items{
+  width: min-content;
+  display: flex;
+  color: var(--text-primary);
+  align-items: center;
+}
+
+.lista-items{
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+}
+
+.lista-items li{
+  padding: 10px;
+  border-radius: var(--radius-base);
+  transition: all 0.3s ease-in-out;
+}
+
+.lista-items li:hover{
+  background-color: var(--bg-secondary);
+}
+
+.nav-item{
+  color: var(--text-primary);
+}
+
+/* Agregando estilos para los contenedores */
+.cuerpo {
+  overflow-x: hidden;
+  max-width: 100%;
+  padding: 0px;
+  margin: 0px;
+
+  background: url("../imagenes/fondo.svg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+.productos .contenedor {
+  background-color: var(--bg-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.isotipo {
+  width: 3rem;
+  transform: rotate(-15deg);
+}
+
+/* Agregando estilos para el titulo*/
+.cont-cabecera {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.descripcion {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.subtitulo {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.icono-seccion {
+  width: 1.5rem;
+}
+
+/* Agregando estilos para la distribucion de contenido en filas */
+.fila {
+  display: flex; /* Activar Flex-box */
+  flex-direction: row; /* Muestra los elementos hijos uno al lado del otro (fila) */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem; /* Separa los elementos de la fila entre sí */
+  max-width: 100%;
+}
+
+/* Agregando estilos para la distribucion de contenido en tarjetas */
+.tarjeta {
+  width: 100%;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+  border-radius: var(
+    --radius-base
+  ); /* Redondear el borde de cada tarjeta (tarjeta) */
+  align-items: center; /* Centrar los elementos dentro de la tarjeta */
+  gap: 1rem; /* Separar los elementos entre sí dentro de la tarjeta */
+  box-shadow: 3px 3px 10px var(--shadow-card); /* Crear un efecto de sombra en cada tarjeta (tarjeta) */
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.tarjeta:hover{
+  transform: scale(105%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Agregando estilos para las imagenes */
+.imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /*Redimensionar la imagen para que cubra el tamaño de su contendor*/
+  border-radius: var(--radius-base); /* Redondear el borde de la imagen */
+  filter: sepia(10%);
+}
+
+.imagen:hover {
+  filter: sepia(0%) brightness(110%) contrast(110%);
+
+}
+
+.imagen-rounded {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /*Redimensionar la imagen para que cubra el tamaño de su contendor*/
+  border-radius: var(--radius-rounded); /* Redondear el borde de la imagen */
+}
+
+/* Agregando estilos para los conceptos */
+.concepto {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilos para botones */
+.button-primary {
+  background-color: var(--text-primary);
+  color: var(--text-base);
+  width: max-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);  
+}
+
+
+/* Hover sobre el botón de enviar */
+.button-primary:hover {
+  background-color: var(--bg-other);
+}
+
+
+/* ------------------------------------
+    Selectores de estilo de tipo id
+   ------------------------------------  */
+
+/* Agregando estilos para la cabecera */
+#cabecera {
+  background-color: var(--text-base);
+  color: var(--text-primary);
+  max-width: 100%;
+}
+
+/* Agregando estilos para la seccion de nosotros */
+#nosotros {
+  background-color: var(--bg-secondary);
+  max-width: 100%;
+}
+
+/* Agregando estilos para la sección de información general */
+#info {
+  background-color: var(--bg-primary-bold);
+  max-width: 100%;
+  padding-top: 40px;
+}
+
+#conceptos {
+  background: white;
+}
+
+#info h2 {
+  text-align: center;
+}
+
+/* Agregando estilos para la seccion de contacto */
+#contacto {
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#cont-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#contactanos2 {
+  display: flex;
+  gap: 40px;
+}
+
+#contactanos2 a {
+  color: white;
+  text-decoration: none;
+}
+
+#contactanos2 i {
+  font-size: 32px;
+}
+
+/* Agregando estilos para la seccion de copyright */
+#copyright {
+  background-color: #333333;
+  color: var(--text-footer);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#cont-copy {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+}
+
+
+/* PÁGINA CON FORMULARIO DE CONTACTO */
+
+/* Estilos para el formulario */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; 
+  border: 1px solid var(--text-primary); /*borde */
+  border-radius: 4px; /* borde redondeado */
+  box-sizing: border-box; /* garantizar el padding y ancho */
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical /* permite agrandar el text-area verticalmente */
+}
+
+/* Estilos para el botón de enviar */
+input[type=submit] {
+  background-color: var(--text-primary);
+  color: var(--text-base);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover sobre el botón de enviar */
+input[type=submit]:hover {
+  background-color: var(--bg-other);
+}
+
+
+
+/*PÁGINA PARA PEDIDOS*/
+
+.contenedor-other {
+  width: 100%;
+  max-width: 1024px;
+  background-color: var(--bg-primary-bold);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+.pedidos-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.pedidos-items h2{
+  padding-top: 1rem;
+  padding-bottom: 0px;
+}
